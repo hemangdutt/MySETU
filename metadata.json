@@ -1,0 +1,6 @@
+{
+  "name": "MySETU Maharashtra",
+  "description": "My Skill Empowerment & Technical Utility - Labour Market Intelligence & Skill Development Platform, Government of Maharashtra (SIH PS 134).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

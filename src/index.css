@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --gov-blue-primary: #0A3A60;
+  --gov-blue-dark: #072640;
+  --gov-blue-light: #EBF3FA;
+  --gov-saffron: #D96B27;
+  --gov-gold: #C07D1E;
+  --gov-border: #CBD5E1;
+  --gov-bg-card: #FFFFFF;
+  --gov-bg-page: #F4F6F9;
+  --gov-text-dark: #1E293B;
+  --gov-text-muted: #64748B;
+  --gov-green: #15803D;
+  --gov-amber: #B45309;
+  --gov-red: #B91C1C;
+}
+
+/* Universal Noto Sans font rule for all text and all numbers across the entire website */
+*, *::before, *::after {
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+html, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, div, table, th, td, a {
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+body {
+  background-color: var(--gov-bg-page);
+  color: var(--gov-text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures for strict vertical alignment of numbers using Noto Sans */
+.tabular-nums, .font-mono, .font-serif {
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Government component standard borders & restrained corners */
+.gov-card {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.gov-card-header {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: #0f2c4d;
+}
+
+.gov-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gov-table th {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.gov-table td {
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.gov-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.gov-table tbody tr:hover {
+  background-color: #f0f7ff;
+}
+
+/* Custom scrollbar for data tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print styling for official government reports */
+@media print {
+  header, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+  .gov-card {
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+  }
+}
