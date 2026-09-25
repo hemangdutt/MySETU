@@ -13,7 +13,7 @@ export const HeroSection: React.FC = () => {
     showNotification
   } = useApp();
 
-  const [bannerSrc, setBannerSrc] = useState<string>('/banner.svg');
+  const [bannerSrc, setBannerSrc] = useState<string>('/banner.png');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
 
   const handleResetBanner = () => {
     localStorage.removeItem('mysetu_custom_banner');
-    setBannerSrc('/banner.svg');
+    setBannerSrc('/banner.png');
     showNotification('Banner reset to official state graphic.');
   };
 
@@ -91,7 +91,7 @@ export const HeroSection: React.FC = () => {
           <Upload className="w-3 h-3" />
           <span>Upload banner.png</span>
         </button>
-        {bannerSrc !== '/banner.svg' && (
+        {bannerSrc !== '/banner.png' && (
           <button
             type="button"
             onClick={handleResetBanner}
